@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Summary: first half of Intro to Web Development</title>
+  <meta name="description" content="Summary of 1st half">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: Make a favicon that better represents the page. -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/summary.css">
+</head>
+
+<body>
+
+  <h1>
+    HTML Tags
+  </h1>
+  <h4>
+    Block vs Inline
+  </h4>
+  <p>
+    <ul>
+      <li> Block elements render vertically and inline elements render horizontally. </li>
+      <li>Block elements occupy the entire space of the parent element.</li>
+      <li> The concept of layout takes advantage of the fact that block elements occupy the whole are of the parent.</li>
+      <li>Block elements can have width and height properties assigned to them. </li>
+      <li>Block elements can contain other block elements or inline elements (called nesting of elements). </li>
+      <li>You can't put block elements inside of inline elements. </li>
+      <li>This is a no-no:
+        <xmp>
+          <span><div> hello </div></span>
+        </xmp>
+      </li>
+      <li>You can switch between block and inline using CSS (display: block, display:block-inline, display:inline)</li>
+    </ul>
+  </p>
+  <h4>Block</h4>
+
+  <p>
+    Examples of block level elements: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">MDN Block-level elements</a>
+
+  </p>
+  <h4>
+    Inline
+  </h4>
+  <p>
+    Examples of inline elements: <a href="ttps://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">MDN Inline-level elements</a>h
+  </p>
+  <h1>
+    Box Model
+  </h1>
+  <p>
+    <ul>
+      <li>
+        Use border, height, width, padding and margins to construct "boxes" to contain content with block element.</li>
+      <li>Inline elements can have border, margin and padding but width and height properties are not supported in all browsers for inline elements.</li>
+      <li>Margin: defines space between border and other outer elements.</li>
+  </ul>
+      <div>
+        <p>
+          In the image below the total height is: 169px and the total width is: 646px.  You add (height or width) + margin + padding + border to get the dimensions of the box.
+        </p>
+
+        <img src="img/box-model.jpg">
+      </div>
+  </p>
+  <h1>
+    CSS classes, id and element selectors
+  </h1>
+  <h1>
+    Navigation: internal and external
+  </h1>
+  <h1>
+    File access: absolute, relative, relative to root
+  </h1>
+
+  <h1>
+    Tables
+  </h1>
+  <h1>
+    Background styles
+  </h1>
+
+  <h1>
+    Horizontal Layout: inline-block, float, flex, grid, absolute
+  </h1>
+
+</body>
+
+</html>
