@@ -46,7 +46,7 @@
     Inline
   </h4>
   <p>
-    Examples of inline elements: <a href="ttps://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">MDN Inline-level elements</a>h
+    Examples of inline elements: <a href="ttps://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">MDN Inline-level elements</a>
   </p>
   <h1>
     Box Model
@@ -57,34 +57,234 @@
         Use border, height, width, padding and margins to construct "boxes" to contain content with block element.</li>
       <li>Inline elements can have border, margin and padding but width and height properties are not supported in all browsers for inline elements.</li>
       <li>Margin: defines space between border and other outer elements.</li>
-  </ul>
-      <div>
-        <p>
-          In the image below the total height is: 169px and the total width is: 646px.  You add (height or width) + margin + padding + border to get the dimensions of the box.
-        </p>
+    </ul>
+    <div>
+      <p>
+        In the image below the total height is: 169px and the total width is: 646px. You add (height or width) + margin + padding + border to get the dimensions of the box.
+      </p>
 
-        <img src="img/box-model.jpg">
-      </div>
+      <img src="img/box-model.jpg">
+    </div>
   </p>
   <h1>
     CSS classes, id and element selectors
   </h1>
+  <p>
+    <dl>
+      <dt>Tag or Element</dt>
+      <dd>for example div, span, footer, section</dd>
+      <dt>id</dt>
+      <dd>add the id attribute with an id value to an element and then select using #, for example #right-nav</dd>
+      <dt>class</dt>
+      <dd>add the class attribute with a name value to an element and then select using . for example .right-nav</dd>
+    </dl>
+  </p>
   <h1>
     Navigation: internal and external
   </h1>
+  <p>
+    <dl>
+      <dt>Internal</dt>
+      <dd>add an id attribute to a section of the page and then in then set up the anchor tag like this
+        <xmp>
+          <a href="#about">About</a>
+        </xmp>
+
+      </dd>
+      <dt>External within web site</dt>
+      <dd>set up a tag like this for a static page in a file named about.html located under the component's folder</dd>
+      <xmp>
+        <a href="components/about.html">About</a>
+      </xmp>
+      <dt>External outside of  web site</dt>
+      <dd>set up a tag like this for google</dd>
+      <xmp>
+        <a href="https://www.google.com">Google</a>
+      </xmp>
+      <dt>Open page in new tab</dt>
+      <dd>add target="_blank" to any of the above anchors, for example</dd>
+      <xmp>
+        <a href="https://www.google.com" target="_blank">Google</a>
+      </xmp>
+      <dt>Stay where you are - used with JavaScript to add your own click event</dt>
+      <dd>set up a tag like this to stay on the same page in the same location</dd>
+      <xmp>
+        <a href="">Click me</a>
+      </xmp>
+    </dl>
+  </p>
   <h1>
     File access: absolute, relative, relative to root
   </h1>
+  <p>
+    <p>
+      <dl>
+        <dt>Absolute</dt>
+        <dd>for "https://www.google.com"</dd>
+        <dt>Relative</dt>
+        <dd>for example "img/red_ball.png"</dd>
+        <dt>Relative to Rook</dt>
+        <dd>for example "/index.html"</dd>
+      </dl>
+    </p>
+
+  </p>
 
   <h1>
     Tables
   </h1>
+  <p>
+    Use these tags (table, th, tr, td) to construct a table for tabular data. Nesting of these tags is prescribed by standards.
+
+    <xmp>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </xmp>
+
+  </p>
   <h1>
     Background styles
   </h1>
+  <dl>
+    <dt>color</dt>
+    <dd>
+      <xmp>
+        background-color: red;
+      </xmp>
+    </dd>
+    <dt>image</dt>
+    <dd>
+      <xmp>
+        background-image: url("img.png")
+      </xmp>
+    </dd>
+    <dt>repeat</dt>
+    <dd>
+      <xmp>
+        background-repeat: no-repeat;
+      </xmp>
+    </dd>
+    <dt>position</dt>
+    <dd>
+      <xmp>
+        background-repeat: no-repeat;
+      </xmp>
+    </dd>
+    <dt>attachment</dt>
+    <dd>
+      If "fixed", the background won't scroll with rest of page. Used for parallax scrolling.
+      <xmp>
+        background-attachment: fixed;
+      </xmp>
+    </dd>
 
+    <dt>size</dt>
+    <dd>
+      <xmp>
+        background-size: cover;
+      </xmp>
+    </dd>
+
+
+  </dl>
   <h1>
     Horizontal Layout: inline-block, float, flex, grid, absolute
+  </h1>
+  <p>
+    see this: <a href="https://www.w3schools.com/css/css_navbar.asp" target="_blank">https://www.w3schools.com/css/css_navbar.asp</a> It's common to use an unordered list for navigation. Whether horizontal or verical, remove the default bullet points
+    with this. The UL tag is the parent container for the LI list items. Let's say we have this html:
+    <xmp>
+      <ul class="navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+
+    </xmp>
+
+    ul.navigation {
+      display:grid;
+      grid-template-columns: repeat(3, 70px);
+    }
+
+    .navigation a {
+  		text-decoration: none;
+    }
+    
+   .navigation li {
+    list-style-type: none;
+   }
+
+    <xmp>
+      ul.navigation { list-style-type: none; }
+    </xmp>
+    <dl>
+      <dt>Inline-Block</dt>
+      <xmp>
+        li { display: inline; }
+      </xmp>
+      <dd></dd>
+      <dt>Float</dt>
+      <xmp>
+        li { 
+          float: left; } 
+        a {
+          display: block; 
+          padding: 10px; 
+          color: black;
+          background-color: lightblue; 
+        }
+
+      </xmp>
+      <dd></dd>
+      <dt>Flex</dt>
+  
+      <dd>
+          <xmp>
+        ul.navigation {
+          width: 300px; 
+          height: 30px; 
+          display: flex; 
+          justify-content: space-around;
+          list-style-type: none;
+        } 
+        .navigation a { 
+          text-decoration: none; 
+        }
+      </xmp>
+      </dd>
+      <dt>Grid</dt>
+      <dd>
+      <xmp>
+      
+      ul.navigation {
+        display:grid;
+        grid-template-columns: repeat(3, 70px);
+      }
+      .navigation a {
+  		  text-decoration: none;
+      }
+    .navigation li {
+      list-style-type: none;
+     }  
+      </xmp>
+      </dd>
+    </dl>
+  </p>
+
+  <h1>
+    Video/Audio
+  </h1>
+  <h1>
+    Mobile First: Responsive layout and media queries
   </h1>
 
 </body>
