@@ -1,4 +1,4 @@
-﻿## HTML Tags
+## HTML Tags
 
 **Block vs Inline**
 
@@ -208,39 +208,39 @@ Png files contain raster graphics with lossless data compression and is the form
 **Audio**
 add controls and a statement incase the browser doesn't suppor the audio tag
 
-   <audio controls>
-     <source src="horse.ogg" type="audio/ogg">
-     <source src="horse.mp3" type="audio/mpeg">
-     Your browser does not support the audio element.
-   </audio>
+       <audio controls>
+         <source src="horse.ogg" type="audio/ogg">
+         <source src="horse.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+       </audio>
         
 **Video**
 Best to add several audio formats as different browsers support different formats. The "controls" attribute provides user with ability to control. Height and width can be added in style sheet
 
-   <video width="320" height="240" controls>
-     <source src="movie.mp4" type="video/mp4">
-     <source src="movie.ogg" type="video/ogg">
-   Your browser does not support the video tag.
-   </video>
+       <video width="320" height="240" controls>
+         <source src="movie.mp4" type="video/mp4">
+         <source src="movie.ogg" type="video/ogg">
+       Your browser does not support the video tag.
+       </video>
       
 **Video with poster**
 If your video is big and takes time to download this will give the user something to look at. See this in action here: Video with [poster example.](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_video_poster)
 
-  <video width="320" height="240" poster="/images/poster.gif" controls>
-   <source src="movie.mp4" type="video/mp4">
-   <source src="movie.ogg" type="video/ogg">
-   Your browser does not support the video tag.
-</video>
+      <video width="320" height="240" poster="/images/poster.gif" controls>
+       <source src="movie.mp4" type="video/mp4">
+       <source src="movie.ogg" type="video/ogg">
+       Your browser does not support the video tag.
+    </video>
         
 **Downloadable Audio/Video**
 Add the work download to the video or audio tag.
 
-       <video width="320" height="240" controls download>
+     <video width="320" height="240" controls download>
        <source src="movie.mp4" type="video/mp4">
        <source src="movie.ogg" type="video/ogg">
      Your browser does not support the video tag.
      </video>
-        
+            
 
 ## Mobile First: Responsive layout and media queries
 
