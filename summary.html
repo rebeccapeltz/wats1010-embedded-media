@@ -197,7 +197,7 @@
 
   </dl>
   <h1>
-    Horizontal Layout: inline-block, float, flex, grid, absolute
+    Horizontal Layout: inline-block, float, flex, grid
   </h1>
   <p>
     see this: <a href="https://www.w3schools.com/css/css_navbar.asp" target="_blank">https://www.w3schools.com/css/css_navbar.asp</a> It's common to use an unordered list for navigation. Whether horizontal or verical, remove the default bullet points
@@ -280,13 +280,155 @@
       </dd>
     </dl>
   </p>
+<h1>
+  Images
+</h1>
+<p>
+  <dt>JPG or JPEG</dt>
+  <dd>This is a lossy format.  Lossy compression is characterized by sampling from the raw data and throwing out some of the data, so that you really have an approximation. If you don't use
+  tools to resize you can get a image that looks different at a larger size than intended.  This is not the skewed image that you get when you violate aspect ratios (for example, making a 100px x 200px image
+  into a 70px x 150px image). Look for this with digital photos and these can get quite big. Think photos.</dd>
+  
+   <dt>GIF</dt>
+  <dd>Gifs are lossless.  Their compression algorithm does not involve the sampling you see with JPG.  They tend to be smaller because they use an indexed color pallette which is a subset of all colors and 
+  therefore some approximation occurs in coloring.  You see the gif format used a lot in animation. Think animation.</dd>
+  
+   <dt>PNG</dt>
+  <dd>Png files contain raster graphics with lossless data compression and is the formal replacement for gifs, but pngs are not used for animation.  Pngs are "indexed" meaning they used a fixed color 
+  pallette. Indexed color means that you have a predefined set of color that you map the original colors too. You can read more here 
+    on indexed color: <a href="https://en.wikipedia.org/wiki/Indexed_color" target="_blank">Png</a> Think drawings.
+  </dd>
+</p>
 
-  <h1>
-    Video/Audio
+ <h1>
+    Video/Audio 
   </h1>
+ <p>
+    <dl>
+      <dt>Audio</dt>
+      <dd>add controls and a statement incase the browser doesn't suppor the audio tag
+        <xmp>
+          <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </xmp>
+
+      </dd>
+      <dt>Video</dt>
+      <dd>Best to add several audio formats as different browsers support different formats. The "controls" attribute provides user with ability to control.  Height and width can be added in style sheet</dd>
+     
+      <xmp>
+        <video width="320" height="240" controls>
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+      </xmp>
+      
+       <dt>Video with poster</dt>
+      <dd> If your video is big and takes time to download this will give the user something to look at. See this in action here:
+        <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_video_poster" target="_blank">Video with poster example</a>. 
+
+      <xmp>
+        <video width="320" height="240" poster="/images/poster.gif" controls>
+           <source src="movie.mp4" type="video/mp4">
+           <source src="movie.ogg" type="video/ogg">
+           Your browser does not support the video tag.
+        </video>
+      </xmp>
+      
+      
+      <dt>Downloadable Audio/Video</dt>
+      <dd>Add the work download to the video or audio tag.</dd>
+
+      <xmp>
+        <video width="320" height="240" controls download>
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+      </xmp>
+    </dl>
+  </p>
+
+
   <h1>
     Mobile First: Responsive layout and media queries
   </h1>
+
+<p>
+  "Mobile First" means we code the layout that we want for the mobile device, which usually tends to be vertical ranther than employing horizontal layouts.  Then we add media queries for the
+  different break points.  
+  <dt>CSS Media query</dt>
+  <dd>To get 3 sizes add 2 media queries that alter the layout of the vertical mobile layout. With the queries below we'll see a different layout for screen sizes smaller than 
+  400px, between 400-800px and greater than 800px.  This roughly corresponds to phone, tablet and laptop(or desktop).  See this <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media2" target="_blank">
+    for example</a></dd>
+  <xmp>
+  @media screen and (min-width: 400px) {
+    body {
+        background-color: lightgreen;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    body {
+        background-color: lavender;
+    }
+  }
+    </xmp>
+
+  <dt>Common breakpoints</dt>
+  <dd>320px, 480px, 768px, 1024px are common breakpoints for small mobile, larger mobile, tablet, laptop</dd>
+  
+  
+</p>
+
+  <h1>
+    Bootstrap grid system
+  </h1>
+<p>
+  The grid system uses CSS Flex to layout containers horizontally and it wraps when the count for a given media breakpoint totals 12.  Bootstrap uses classes to 
+  define a container which holds rows containing the items it lays out.  The sample below will have 6 columns for devices above 768px(md breakpoint), then 3 columns, and then 
+  2 columns as the width of the container decreases.
+  <xmp>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3>Column 2</h3>
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3>Column 3</h3> 
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+      </div>
+       <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3>Column 4</h3> 
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+      </div>
+       <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3>Column 5</h3> 
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+      </div>
+       <div class="col-xs-6 col-sm-4 col-md-2">
+        <h3>Column 6</h3> 
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+      </div>
+    </div>
+</div>
+  </xmp>
+</p>
 
 </body>
 
