@@ -7,7 +7,7 @@
  - Block elements occupy the entire space of the parent element.
  - The concept of layout takes advantage of the fact that block elements
    occupy the whole are of the parent.
- - Block elements can have width and height properties assigned to them.
+ - Block elements can have height properties assigned to them.
  - Block elements can contain other block elements or inline elements
    (called nesting of elements).
  - You can't put block elements inside of inline elements.
